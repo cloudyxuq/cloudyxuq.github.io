@@ -7,14 +7,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>标签 - 技术学习笔记-java&amp;other</title>
+<title>标签: 设计模式 - 技术学习笔记-java&amp;other</title>
 
 
     <meta name="description" content="程序学习记录文档">
-<meta name="keywords" content="设计模式">
 <meta property="og:type" content="website">
 <meta property="og:title" content="技术学习笔记-java&amp;other">
-<meta property="og:url" content="http:&#x2F;&#x2F;cloudyxuq.github.io&#x2F;tags&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;cloudyxuq.github.io&#x2F;tags&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F&#x2F;index.html">
 <meta property="og:site_name" content="技术学习笔记-java&amp;other">
 <meta property="og:description" content="程序学习记录文档">
 <meta property="og:locale" content="zh-CN">
@@ -95,7 +94,7 @@
                 <a class="navbar-item"
                 href="/categories">分类</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/tags">标签</a>
                 
                 <a class="navbar-item"
@@ -127,25 +126,81 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">设计模式</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-07T07:23:41.629Z">2019-11-07</time>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="tag">设计模式</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">策略模式</a>
                 </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 468 个字)
+                </span>
+                
                 
             </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/07/design_strategy/">设计模式 之 Strategy（策略模式）</a>
+            
+        </h1>
+        <div class="content">
+            <p>jdk参考定义：Jdk中的TreeSet和 TreeMap的排序功能就是使用了策略模式。</p>
+<h2 id="策略模式的定义"><a href="#策略模式的定义" class="headerlink" title="策略模式的定义"></a>策略模式的定义</h2><blockquote>
+<blockquote>
+<p>该模式定义了一些列的算法（行为），并将每个算法封装起来，使他们可以相互替换，且算法的变法不会影响使用算法的客户。<br>策略模式属于对象行为模式，它通过对算法进行封装，把使用算法的责任和算法的实现分割开来，并委派给不同的对象对这些算法进行管理。</p>
+</blockquote>
+</blockquote>
+<h2 id="策略模式的优缺点"><a href="#策略模式的优缺点" class="headerlink" title="策略模式的优缺点"></a>策略模式的优缺点</h2><p><strong>优点</strong></p>
+<blockquote>
+<blockquote>
+<p>1.策略模式提供了管理相关的算法族的办法。策略类的等级结构定义了一个算法或行为族。恰当使用继承可以把公共的代码移到父类里面，从而避免代码重复。<br> <br>2.使用策略模式可以避免使用多重条件(if-else)语句。多重条件语句不易维护，它把采取哪一种算法或采取哪一种行为的逻辑与算法或行为的逻辑混合在一起，统统列在一个多重条件语句里面，比使用继承的办法还要原始和落后。</p>
+</blockquote>
+</blockquote>
+<p><strong>缺点</strong></p>
+<blockquote>
+<blockquote>
+<p>1.客户端必须知道所有的策略类，并自行决定使用哪一个策略类。这就意味着客户端必须理解这些算法的区别，以便适时选择恰当的算法类。换言之，策略模式只适用于客户端知道算法或行为的情况。<br>  <br>2.由于策略模式把每个具体的策略实现都单独封装成为类，如果备选的策略很多的话，那么对象的数目就会很可观。 </p>
+</blockquote>
+</blockquote>
+
+        </div>
+        
+        
+        
     </div>
-</div></div>
+</div>
+
+
+
+
+
+
+
+
+</div>
                 
 
 
